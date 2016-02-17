@@ -28,6 +28,11 @@
             <string>image_speed = 0;
 
 image_index = 0;
+
+// Here I create an index that I put
+// the room index that I want to go to
+
+var gotoRoom;
 </string>
           </argument>
         </arguments>

@@ -44,8 +44,9 @@
     <sound>sound\Where_is_my_mind</sound>
   </sounds>
   <sprites name="sprites">
-    <sprites name="Menu_room">
+    <sprites name="Buttons for menu">
       <sprite>sprites\spr_btn_quit</sprite>
+      <sprite>sprites\spr_btn_Menu</sprite>
       <sprite>sprites\spr_btn_start</sprite>
     </sprites>
     <sprite>sprites\Bed</sprite>
@@ -100,6 +101,8 @@
     <objects name="Menu_room">
       <object>objects\obj_btn_start</object>
       <object>objects\obj_btn_quit</object>
+      <object>objects\obj_btn_goto_Menu</object>
+      <object>objects\obj_btn_options</object>
       <object>objects\obj_btn</object>
       <object>objects\obj_fade</object>
     </objects>
@@ -119,6 +122,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\Menu_room</room>
+    <room>rooms\Options_room</room>
     <room>rooms\Office_room</room>
   </rooms>
   <help>

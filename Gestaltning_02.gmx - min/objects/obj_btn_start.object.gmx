@@ -25,7 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(0, 0, obj_fade);
+            <string>roomGoto = 2;
+
+instance_create(0, 0, obj_fade);
+
 </string>
           </argument>
         </arguments>
