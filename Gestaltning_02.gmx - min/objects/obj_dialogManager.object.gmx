@@ -86,7 +86,7 @@ if(speaker == "0" || speaker == "2")
 else if(speaker == "1")
     draw_set_color(c_blue);
 draw_text(282, 512, names[speaker] + "#" + string_copy(curString, 0, ceil(typedLetters)));
-if(typedLetters &lt; string_length(curString)) {typedLetters += 0.5;}
+if(typedLetters &lt; string_length(curString)) {typedLetters += 0.75;}
 </string>
           </argument>
         </arguments>
@@ -109,13 +109,11 @@ if(typedLetters &lt; string_length(curString)) {typedLetters += 0.5;}
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if((speaker == "0" || speaker == "2") &amp;&amp; sceneDesc[curDialog] == "C"){
-if(curDialog &lt; maxLines - 1){
+            <string>if(curDialog &lt; maxLines - 1){
 dialogMod = 1;
 curDialog += dialogMod;
 }
 typedLetters = 0;
-}
 </string>
           </argument>
         </arguments>
@@ -138,9 +136,10 @@ typedLetters = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(speaker == "1" &amp;&amp; sceneDesc[curDialog] == "C"){
+            <string>if(speaker == "1"){
 if(curDialog &lt; maxLines - 1){
-curDialog++;
+dialogMod = 2;
+curDialog += dialogMod;
 }
 typedLetters = 0;
 }
@@ -166,9 +165,10 @@ typedLetters = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(speaker == "1" &amp;&amp; sceneDesc[curDialog] == "C"){
+            <string>if(speaker == "1"){
 if(curDialog &lt; maxLines - 1){
-curDialog++;
+dialogMod = 3;
+curDialog += dialogMod;
 }
 typedLetters = 0;
 }
@@ -195,9 +195,39 @@ typedLetters = 0;
           <argument>
             <kind>1</kind>
             <string>if(curDialog &lt; maxLines - 1){
-curDialog++;
+if(dialogMod != 1){
+dialogMod = 4 - dialogMod;
 }
+curDialog += dialogMod;
+dialogMod = 1;
 typedLetters = 0;
+}
+else{
+game_end();
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="27">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>game_end();
 </string>
           </argument>
         </arguments>
