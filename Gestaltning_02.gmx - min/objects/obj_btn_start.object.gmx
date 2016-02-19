@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>roomGoto = 2;
+            <string>gotoRoom = 2;
 
 instance_create(0, 0, obj_fade);
 

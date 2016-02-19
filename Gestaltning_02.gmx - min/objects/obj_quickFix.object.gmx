@@ -3,12 +3,12 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-1410065407</depth>
-  <persistent>-1</persistent>
+  <depth>0</depth>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,57 +25,23 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>a = 0;
-
-fade = 1;
-
-var thatRoom;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>a = clamp(a + (fade * 0.05), 0, 1);
-
-if (a == 1)
+            <string>    // Creates a variable that I put the room 
+    // index in so that the player can enter it
+    // thatRoom = room_get_name(obj_btn.gotoRoom);
+    // room_goto(thatRoom);
+    
+if(obj_btn.gotoRoom == 0)
 {
-    instance_create(1, 1, obj_quickFix);
-    fade = -1;
+    room_goto(Menu_room);
 }
-
-if (a == 0) &amp;&amp; (fade == -1)
+else if(obj_btn.gotoRoom == 1)
 {
-    instance_destroy();
+    room_goto(Options_room);
 }
-
-draw_set_color(c_black);
-draw_set_alpha(a);
-draw_rectangle(
-    view_xview[0],
-    view_yview[0],
-    view_xview[0] + view_wview[0],
-    view_yview[0] + view_hview[0],
-    0
-);
-
-draw_set_alpha(1);
+else if(obj_btn.gotoRoom == 2)
+{
+    room_goto(Office_room);
+}
 </string>
           </argument>
         </arguments>
