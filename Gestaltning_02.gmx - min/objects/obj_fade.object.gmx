@@ -58,7 +58,6 @@ if (a == 1)
 {
     // Creates a variable that I put the room 
     // index in so that the player can enter it
-    thatRoom = room_get_name(obj_btn.gotoRoom);
     room_goto(thatRoom);
     fade = -1;
 }
