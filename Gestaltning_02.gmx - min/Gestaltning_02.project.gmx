@@ -69,6 +69,10 @@
       <sprite>sprites\spr_btn_Menu</sprite>
       <sprite>sprites\spr_btn_start</sprite>
     </sprites>
+    <sprites name="slider">
+      <sprite>sprites\spr_hBar</sprite>
+      <sprite>sprites\spr_hSlider</sprite>
+    </sprites>
     <sprite>sprites\Bed</sprite>
     <sprite>sprites\Doctor</sprite>
     <sprite>sprites\Bed1</sprite>
@@ -135,10 +139,14 @@
       <object>objects\Papers_obj</object>
       <object>objects\ChairBack_obj</object>
       <object>objects\ChairFront_obj</object>
-      <object>objects\SoundMaster</object>
+      <object>objects\obj_Volume_controller</object>
       <object>objects\player_obj</object>
       <object>objects\obj_dialogManager</object>
       <object>objects\Plant_obj</object>
+    </objects>
+    <objects name="Options Menu">
+      <object>objects\obj_hslider</object>
+      <object>objects\obj_hbar</object>
     </objects>
   </objects>
   <rooms name="rooms">
