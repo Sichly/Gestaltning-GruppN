@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -33,6 +33,13 @@ image_index = 0;
 // the room index that I want to go to
 
 var gotoRoom;
+
+// Variables from obj_fade
+
+a = 0;
+
+fade = 1;
+
 </string>
           </argument>
         </arguments>

@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>gotoRoom = 2;
+            <string>roomIndex = 2;
+
 
 instance_create(0, 0, obj_fade);
 
