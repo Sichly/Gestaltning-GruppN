@@ -125,7 +125,6 @@
       <object>objects\obj_btn_goto_Menu</object>
       <object>objects\obj_btn_options</object>
       <object>objects\obj_btn</object>
-      <object>objects\obj_quickFix</object>
       <object>objects\obj_fade</object>
     </objects>
     <objects name="Office_room">
