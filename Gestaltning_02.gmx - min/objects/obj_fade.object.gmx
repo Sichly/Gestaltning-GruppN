@@ -56,7 +56,13 @@ var thatRoom;
 
 if (a == 1)
 {
+<<<<<<< HEAD
     instance_create(1, 1, obj_quickFix);
+=======
+    // Creates a variable that I put the room 
+    // index in so that the player can enter it
+    room_goto(thatRoom);
+>>>>>>> origin/master
     fade = -1;
 }
 

@@ -32,7 +32,7 @@ speaker = "0";
 maxLines = 0;
 names[0] = "The Patient"; names[1] = "Dr. Jones"; names[2] = "Henrietta";
 sprites[0] = spr_h_shade; sprites[1] = spr_doc; sprites[2] = spr_h_reveal;
-var curString = "";
+curString = ""; readFile = "";
 dialogMod = 1;
 draw_set_font(game_font);
 file = file_text_open_read("dialog_text.txt");
@@ -43,10 +43,10 @@ typedLetters = 0;
 var i = 0;
 
 while(!file_text_eof(file)){
-     curString = file_text_readln(file);
-     lines[i,0] = script_execute(split_string, curString, 0, "|");
-     lines[i,1] = script_execute(split_string, curString, 1, "|");
-     sceneDesc[i] = script_execute(split_string, curString, 2, "|");
+     readFile = file_text_readln(file);
+     lines[i,0] = script_execute(split_string, readFile, 0, "|");
+     lines[i,1] = script_execute(split_string, readFile, 2, "|");
+     sceneDesc[i] = script_execute(split_string, readFile, 1, "|");
      i++;
 }
 
@@ -75,7 +75,7 @@ file_text_close(file);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var curString = lines[curDialog,1];
+            <string>curString = lines[curDialog,1];
 speaker = lines[curDialog, 0];
 
 draw_sprite(spr_UI, 0, 0,512);
@@ -86,7 +86,12 @@ if(speaker == "0" || speaker == "2")
 else if(speaker == "1")
     draw_set_color(c_blue);
 draw_text(282, 512, names[speaker] + "#" + string_copy(curString, 0, ceil(typedLetters)));
-if(typedLetters &lt; string_length(curString)) {typedLetters += 0.5;}
+if(typedLetters &lt; string_length(curString)) {typedLetters += 0.75;}
+
+if(sceneDesc[curDialog] == "L" || sceneDesc[curDialog] == "C" &amp;&amp; typedLetters &lt; string_length(curString)){
+    draw_set_color(c_black);
+    draw_text(800, 700, "Press Space");
+}
 </string>
           </argument>
         </arguments>
@@ -109,7 +114,7 @@ if(typedLetters &lt; string_length(curString)) {typedLetters += 0.5;}
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if((speaker == "0" || speaker == "2") &amp;&amp; sceneDesc[curDialog] == "C"){
+            <string>if(sceneDesc[curDialog] == "C"){
 if(curDialog &lt; maxLines - 1){
 dialogMod = 1;
 curDialog += dialogMod;
@@ -140,10 +145,13 @@ typedLetters = 0;
             <kind>1</kind>
             <string>if(speaker == "1" &amp;&amp; sceneDesc[curDialog] == "C"){
 if(curDialog &lt; maxLines - 1){
-curDialog++;
+dialogMod = 2;
+curDialog += dialogMod;
 }
 typedLetters = 0;
 }
+else if(speaker != "1")
+{audio_play_sound(snd_nope, 10, false);}
 </string>
           </argument>
         </arguments>
@@ -167,10 +175,15 @@ typedLetters = 0;
           <argument>
             <kind>1</kind>
             <string>if(speaker == "1" &amp;&amp; sceneDesc[curDialog] == "C"){
+
 if(curDialog &lt; maxLines - 1){
-curDialog++;
+dialogMod = 3;
+curDialog += dialogMod;
 }
 typedLetters = 0;
+}
+else if (speaker != "1"){
+audio_play_sound(snd_nope, 10, false);
 }
 </string>
           </argument>
@@ -194,10 +207,41 @@ typedLetters = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(curDialog &lt; maxLines - 1){
-curDialog++;
+            <string>if(typedLetters &lt; string_length(curString)){
+    typedLetters = string_length(curString);
 }
-typedLetters = 0;
+else if(curDialog &lt; maxLines - 1)
+{
+    if(dialogMod != 1){dialogMod = 4 - dialogMod;}
+    curDialog += dialogMod;
+    dialogMod = 1;
+    typedLetters = 0;
+}
+else{game_end();}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="27">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>game_end();
 </string>
           </argument>
         </arguments>

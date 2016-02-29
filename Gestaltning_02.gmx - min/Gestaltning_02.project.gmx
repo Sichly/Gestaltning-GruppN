@@ -3,7 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="4" name="datafiles">
+  <datafiles number="6" name="datafiles">
     <datafile>
       <name>Origin.lnk</name>
       <exists>-1</exists>
@@ -24,7 +24,7 @@
     <datafile>
       <name>dialog_text.txt</name>
       <exists>-1</exists>
-      <size>110</size>
+      <size>2382</size>
       <exportAction>2</exportAction>
       <exportDir></exportDir>
       <overwrite>0</overwrite>
@@ -38,10 +38,30 @@
       </ConfigOptions>
       <filename>dialog_text.txt</filename>
     </datafile>
+    <datafile>
+      <name>Nope.wav</name>
+      <exists>-1</exists>
+      <size>66016</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Nope.wav</filename>
+    </datafile>
   </datafiles>
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\Where_is_my_mind</sound>
+    <sounds name="SFX">
+      <sound>sound\snd_nope</sound>
+    </sounds>
   </sounds>
   <sprites name="sprites">
     <sprites name="Buttons for menu">
@@ -89,6 +109,7 @@
       </backgrounds>
     </backgrounds>
     <background>background\Rug</background>
+    <background>background\background14</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">

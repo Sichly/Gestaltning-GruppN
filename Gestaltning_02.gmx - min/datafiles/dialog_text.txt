@@ -1,24 +1,28 @@
-1|Good evening, miss! How are you feeling right now? Are you still feeling ill?|L
-0|1. (Wealthy) Why, yes! And I'll pay you double if you can help me quickly!##2. (Privileged) I could go to any hospital in town, but I heard you were the best doctor in town.##3. I don't have a choice. I need your help!|C
-0|You know what it's like, doctor. Someone like me can't just walk into any hospital they want.##I had to go very far just to get here.|L
-1|I see. How do you feel about that? |L
-0|1. (Resigned) It won't change, doc. Not in our lives.##2. (Revolutionary) It's wrong, doctor Jones, and it needs to change.##3. ...|C
-1|I see.|L
-1|Let's go back to your condition. How are you feeling?|L
-0|1. (Correctly Diagnosed) I have cancer, doctor Jones. I don't feel good at all.##2. (Concerned) I'm under a lot of pressure. Work, family, it's very stressful.##3. I think I might be... expecting again, doctor.|C
-1|Is that so?|L
-0|Yes, but it feels a bit... different this time.|L
-1|Hm. In any case, we'll have to take a sample and send it off for analysis. With any luck, the rabbit will be dead.|L
-0|Excuse me?|L
-1|Oh, don't worry your little head about it, miss. It's a medical term.|L
-0|...Oh.|L
-1|So, how many sexual partners have you had in the last month?|L
-0|1. (Offended) What's that supposed to mean?##2. (Personal) I don't see how that has anything to do with this.##3. Just my husband, doctor. Why do you ask?|C
-1|Oh, nothing personal. If this is caused by a disease, and not pregnancy, then it's in everyone's best interest to find out what it is. It's standard procedure.|L
-0|I understand.|L
-1|Either way, we'll have to take some samples and run all the tests. We should have the results within a month.|L
-1|I'll contact you as soon as they're finished, miss Lacks.|L
-2|Thank you, doctor Jones. I look forward to it.|L
-1|Amazing. Her cells keep reproducing outside her body. This is a discovery of vast scientific importance.|L
-1|What should I do?|L
-1|1. (Passive) I have to tell mrs. Lacks. The decision should be hers.##2. (Compassionate) Her life is forfeit, but her condition should be known. I have to tell her family.##3. (Secretive) I have to analyze this further. To the laboratory.|C
+1|L|Good evening, miss! How are you feeling today? A bit under the weather?
+0|C|1. (Wealthy) Why, yes! And I'll pay you double if you can help me quickly!##2. (Privileged) I could go to any hospital, but I heard you were the best doctor in town.##3. I don't have a choice. I need your help!
+0|L|You know what it's like, doctor. Someone like me can't just walk into any hospital they want.##I had to go very far just to get here.
+1|L|I see. How do you feel about that?
+0|C|1. (Resigned) It won't change, doc. Not in our lives.##2. (Revolutionary) It's wrong, doctor Jones, and it needs to change.##3. ...
+1|L|I see.
+1|L|Let's go back to your condition. How are you feeling?
+0|C|1. (Correctly Diagnosed) I have cancer, doctor Jones. I don't feel good at all.##2. (Concerned) I'm under a lot of pressure. Work, family, it's very stressful.##3. I think I might be... expecting again, doctor.
+1|L|Is that so?
+0|L|Yes, but it feels a bit... different this time.
+1|L|Hm. In any case, we'll have to take a sample and send it off for analysis.##With any luck, the rabbit will be dead.
+0|L|Excuse me?|L
+1|L|Oh, don't worry your little head about it, miss. It's a medical term.
+0|L|...Oh.
+1|L|So, how many sexual partners have you had in the last month?
+0|C|1. (Offended) What's that supposed to mean?##2. (Personal) I don't see how that has anything to do with this.##3. Just my husband, doctor. Why do you ask?
+1|L|Oh, nothing personal. If this is caused by a disease, and not pregnancy,#then it's in everyone's best interest to find out what it is. It's standard procedure.
+0|L|I understand.
+1|L|Either way, we'll have to take some samples and run all the tests.#We should have the results within a month.
+1|L|I'll contact you as soon as they're finished, miss Lacks.
+2|L|Thank you, doctor Jones. I look forward to it.
+1|L|Amazing. Her cells keep reproducing outside her body.#This is a discovery of vast scientific importance.
+1|L|What should I do?
+1|C|1. (Passive) I have to tell mrs. Lacks. The decision should be hers.##2. (Compassionate) Her life is forfeit, but her condition should be known.#I have to tell her family.##3. (Secretive) I have to analyze this further. To the laboratory.
+1|L|Yes, there is so much to learn still.
+1|L|If only there was a way to save her...
+1|L|Now, where did I put her address...
+1|L|The doctor leaves the room.
