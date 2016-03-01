@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>//randomize ();
+
 image_xscale = random_range(0.5, 1);
 image_yscale = image_xscale;
 
@@ -33,7 +34,7 @@ rightLimit = x - (sprite_width/2) + (image_xscale * 200);
 leftLimit = x + (sprite_width/2) - (image_xscale * 100);
 
 
-a = instance_create(x, y, obj_hslider);
+var a = instance_create(x, y, obj_hslider);
 
 a.image_xscale = image_xscale;
 a.image_yscale = image_yscale;
@@ -41,7 +42,6 @@ a.barLength = sprite_width;
 a.rightLimit = rightLimit;
 a.leftLimit = leftLimit;
 a.x = leftLimit;
-
 </string>
           </argument>
         </arguments>
@@ -64,7 +64,7 @@ a.x = leftLimit;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (mouse_x &gt; leftLimit) &amp;&amp; (mouse_x &lt; rightLimit)
+            <string>if (mouse_x &gt; leftLimit) &amp;&amp; (mouse_x &lt; RightLimit)
 {
     a.x = mouse_x;
 }
