@@ -51,9 +51,16 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
+<<<<<<< HEAD
     <instance objName="obj_btn_start" x="378" y="145" name="inst_7819B64C" locked="0" code="gotoRoom = 2;&#xA;menuNavButton = true;&#xA;" scaleX="0.990000009536743" scaleY="0.930000007152557" colour="4294967295" rotation="0"/>
     <instance objName="obj_btn_quit" x="-22" y="50" name="inst_34A15657" locked="0" code="" scaleX="1.04999995231628" scaleY="1.03648066520691" colour="4294967295" rotation="0"/>
     <instance objName="obj_btn_options" x="612" y="73" name="inst_797A3EDF" locked="0" code="gotoRoom = 1;&#xA;menuNavButton = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+=======
+    <instance objName="obj_btn_start" x="411" y="141" name="inst_7819B64C" locked="0" code="gotoRoom = 2;&#xA;menuNavButton = true;&#xA;" scaleX="0.990000009536743" scaleY="0.930000007152557" colour="4294967295" rotation="0"/>
+    <instance objName="obj_btn_quit" x="31" y="76" name="inst_34A15657" locked="0" code="" scaleX="1.04999995231628" scaleY="1.03648066520691" colour="4294967295" rotation="0"/>
+    <instance objName="obj_btn_options" x="585" y="98" name="inst_797A3EDF" locked="0" code="gotoRoom = 1;&#xA;menuNavButton = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_variable_handler" x="33" y="33" name="inst_CC0AC38A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+>>>>>>> origin/master
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

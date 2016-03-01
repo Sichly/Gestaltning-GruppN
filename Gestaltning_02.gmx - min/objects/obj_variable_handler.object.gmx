@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var snd = audio_play_sound(Where_is_my_mind, 8, true);
-audio_sound_gain(snd, (global.volume * 0.01), 0);
+            <string>global.volume = 0;
+
 </string>
           </argument>
         </arguments>

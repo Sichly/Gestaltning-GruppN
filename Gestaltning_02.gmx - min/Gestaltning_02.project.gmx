@@ -133,6 +133,8 @@
       <object>objects\obj_btn_options</object>
       <object>objects\obj_btn</object>
       <object>objects\obj_fade</object>
+      <object>objects\obj_Henrietta_fade</object>
+      <object>objects\obj_variable_handler</object>
     </objects>
     <objects name="Office_room">
       <object>objects\object0</object>
