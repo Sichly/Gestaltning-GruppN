@@ -73,6 +73,8 @@
       <sprite>sprites\spr_hBar</sprite>
       <sprite>sprites\spr_hSlider</sprite>
     </sprites>
+    <sprite>sprites\Lamp_spr</sprite>
+    <sprite>sprites\Border_spr</sprite>
     <sprite>sprites\Bed</sprite>
     <sprite>sprites\Doctor</sprite>
     <sprite>sprites\Bed1</sprite>
@@ -102,6 +104,7 @@
         <background>background\Window</background>
       </backgrounds>
       <backgrounds name="group">
+        <background>background\Painting_Wide</background>
         <background>background\Bookcase</background>
         <background>background\CoatHanger</background>
         <background>background\Clock</background>
@@ -136,6 +139,8 @@
       <object>objects\Doctor_obj</object>
       <object>objects\object2</object>
       <object>objects\Table_obj</object>
+      <object>objects\Lamp_obj</object>
+      <object>objects\Border_obj</object>
       <object>objects\Papers_obj</object>
       <object>objects\ChairBack_obj</object>
       <object>objects\ChairFront_obj</object>
