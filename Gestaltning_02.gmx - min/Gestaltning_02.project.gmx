@@ -90,7 +90,7 @@
       <sprite>sprites\spr_h_shade</sprite>
       <sprite>sprites\spr_h_reveal</sprite>
     </sprites>
-    <sprite>sprites\sprite13</sprite>
+    <sprite>sprites\Plant_spr</sprite>
   </sprites>
   <backgrounds name="background">
     <backgrounds name="tiles">
