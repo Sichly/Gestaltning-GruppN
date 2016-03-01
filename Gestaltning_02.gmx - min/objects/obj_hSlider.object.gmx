@@ -30,7 +30,7 @@ grab = false;
 percentage = 0;
 
 // Den här variabeln ska reglera volymen i spelet
-volume = percentage;
+global.volume = percentage;
 </string>
           </argument>
         </arguments>
@@ -152,6 +152,9 @@ xx = x - mouse_x;
             <string>draw_self();
 
 draw_set_colour(c_white);
+
+draw_text(x + 150, y, "Volume: " + string(percentage));
+/*
 draw_set_halign(fa_center);
 draw_text(x, y + 70, "Bar_Length: " + string(barLength));
 draw_text(x, y + 90, "Left Limit: " + string(leftLimit));
@@ -159,7 +162,7 @@ draw_text(x, y + 110, "Right Limit: " + string(rightLimit));
 draw_text(x, y + 130, "Slider Position: " + string(y - leftLimit));
 draw_text(x, y + 150, "Percentage: " + string(percentage));
 draw_text(x, y + 170, "Grabbed?: " + string(grab));
-
+*/
 </string>
           </argument>
         </arguments>

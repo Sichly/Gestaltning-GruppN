@@ -64,7 +64,7 @@ a.x = leftLimit;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (mouse_x &gt; leftLimit) &amp;&amp; (mouse_x &lt; RightLimit)
+            <string>if (mouse_x &gt; leftLimit) &amp;&amp; (mouse_x &lt; rightLimit)
 {
     a.x = mouse_x;
 }
