@@ -54,6 +54,7 @@
     <instance objName="obj_btn_start" x="411" y="141" name="inst_7819B64C" locked="0" code="gotoRoom = 2;&#xA;menuNavButton = true;&#xA;" scaleX="0.990000009536743" scaleY="0.930000007152557" colour="4294967295" rotation="0"/>
     <instance objName="obj_btn_quit" x="31" y="76" name="inst_34A15657" locked="0" code="" scaleX="1.04999995231628" scaleY="1.03648066520691" colour="4294967295" rotation="0"/>
     <instance objName="obj_btn_options" x="585" y="98" name="inst_797A3EDF" locked="0" code="gotoRoom = 1;&#xA;menuNavButton = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_variable_handler" x="33" y="33" name="inst_CC0AC38A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
