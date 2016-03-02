@@ -151,7 +151,6 @@
       <object>objects\Plant_obj</object>
     </objects>
     <objects name="Options Menu">
-      <object>objects\obj_Slider_Manager</object>
       <object>objects\obj_hslider</object>
       <object>objects\obj_hbar</object>
     </objects>
