@@ -52,9 +52,13 @@
   </views>
   <instances>
     <instance objName="obj_btn_goto_Menu" x="0" y="352" name="inst_9E709056" locked="0" code="gotoRoom = 0;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_hbar" x="161" y="96" name="inst_BFAB8633" locked="0" code="index = 0;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Slider_Manager" x="0" y="32" name="inst_4B1AFC16" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+<<<<<<< HEAD
     <instance objName="obj_hbar" x="192" y="96" name="inst_1D3DF2DE" locked="0" code="index = 0;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_hbar" x="192" y="224" name="inst_B58E5312" locked="0" code="index = 1;&#xA;&#xA;privilegeBool = true;&#xA;&#xA;obj_hbar.privilegeBool = privilegeBool;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+=======
+>>>>>>> origin/master
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
