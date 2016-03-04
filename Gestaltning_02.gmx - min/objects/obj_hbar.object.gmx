@@ -27,14 +27,15 @@
             <kind>1</kind>
             <string>//randomize ();
 
-image_xscale = 2;
+image_xscale = random_range(0.5, 1);
 image_yscale = image_xscale;
 
-rightLimit = x - (sprite_width/2) + (image_xscale * 172);
-leftLimit = x + (sprite_width/2) - (image_xscale * 60);
+rightLimit = x - (sprite_width/2) + (image_xscale * 200);
+leftLimit = x + (sprite_width/2) - (image_xscale * 100);
 
 index = -1;
 
+<<<<<<< HEAD
 // If-satser som säger vad slidern kontrollerar
 
 privilegeBool = false;
@@ -46,6 +47,9 @@ if (index == 1)
 
 // Skapar en instans av hslider fsom skickar all variablerna dit
 a = instance_create(x, y + 8, obj_hslider);
+=======
+a = instance_create(x, y, obj_hslider);
+>>>>>>> origin/master
 
 a.image_xscale = image_xscale;
 a.image_yscale = image_yscale;
@@ -85,7 +89,9 @@ else
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>obj_Slider_Manager.sliders[index] = a.percentage;
+            <string>if(obj_Slider_Manager.sliders[index] != a.percentage){
+obj_Slider_Manager.sliders[index] = a.percentage;
+}
 </string>
           </argument>
         </arguments>

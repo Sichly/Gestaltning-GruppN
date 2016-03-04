@@ -25,17 +25,19 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-xx = 0;
+            <string>xx = 0;
 grab = false;
 percentage = 100;
 
+<<<<<<< HEAD
 // Kod för att procenten ska hålla samma som global.volume
 if(global.volume != 0)
 {
     percentage = global.volume;
 }
 
+=======
+>>>>>>> origin/master
 </string>
           </argument>
         </arguments>
@@ -167,6 +169,7 @@ xx = x - mouse_x;
 
 draw_set_colour(c_white);
 
+<<<<<<< HEAD
 // Om privilege är igång så ska en annan text visas
 if(privilegeBool == true)
 {
@@ -177,6 +180,9 @@ else
     draw_text(obj_hbar.x + 300, y, "Volume: " + string(percentage));
 }
 
+=======
+draw_text(x + 150, y, "Percentage: " + string(percentage));
+>>>>>>> origin/master
 /*
 draw_set_halign(fa_center);
 draw_text(x, y + 70, "Bar_Length: " + string(barLength));
