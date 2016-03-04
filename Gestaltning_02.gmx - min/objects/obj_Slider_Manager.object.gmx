@@ -61,6 +61,11 @@ sliderNames[1] = "Sounds";
 if(sliders[0] != global.volume){
 global.volume = sliders[0];
 }
+
+if(sliders[1] != global.nope_snd)
+{
+    global.nope_snd = sliders[1];
+}
 </string>
           </argument>
         </arguments>
