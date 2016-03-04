@@ -135,6 +135,15 @@ if(sceneDesc[curDialog] == "C"){
         newLines += string_count("#", curChoices[i]);
         }
     }
+
+    /*
+    draw_set_color(c_gray);
+    grayLetters = min(typedLetters, string_length(grayText));
+    draw_text(282, 536, string_copy(grayText, 0, ceil(grayLetters)));
+    if(typedLetters &gt; grayLetters){
+        draw_set_color(c_red);
+        draw_text(282, 536 + (string_count("#", grayText) + 2) * 12, "3" + string_copy(redText, 0, typedLetters - grayLetters));
+    }*/
 }
 else{
 draw_text(282, 560, string_copy(curString, 0, ceil(typedLetters)));

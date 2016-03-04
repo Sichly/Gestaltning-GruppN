@@ -116,6 +116,7 @@
       </backgrounds>
     </backgrounds>
     <background>background\Rug</background>
+    <background>background\Option_menu</background>
     <background>background\background14</background>
   </backgrounds>
   <paths name="paths"/>
@@ -161,6 +162,8 @@
     <room>rooms\Menu_room</room>
     <room>rooms\Options_room</room>
     <room>rooms\Office_room</room>
+    <room>rooms\Prologue_room</room>
+    <room>rooms\Epilogue_room</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
