@@ -158,9 +158,11 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\Prologue_room</room>
     <room>rooms\Menu_room</room>
     <room>rooms\Options_room</room>
     <room>rooms\Office_room</room>
+    <room>rooms\Epilogue_room</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
