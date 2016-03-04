@@ -27,15 +27,15 @@
             <kind>1</kind>
             <string>//randomize ();
 
-image_xscale = 2;
+image_xscale = random_range(0.5, 1);
 image_yscale = image_xscale;
 
-rightLimit = x - (sprite_width/2) + (image_xscale * 172);
-leftLimit = x + (sprite_width/2) - (image_xscale * 60);
+rightLimit = x - (sprite_width/2) + (image_xscale * 200);
+leftLimit = x + (sprite_width/2) - (image_xscale * 100);
 
 index = -1;
 
-a = instance_create(x, y + 8, obj_hslider);
+a = instance_create(x, y, obj_hslider);
 
 a.image_xscale = image_xscale;
 a.image_yscale = image_yscale;
