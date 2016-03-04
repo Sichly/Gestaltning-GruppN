@@ -28,31 +28,72 @@
             <string>lines[0,0] = "";
 sceneDesc[0] = "";
 curDialog = 0;
+curChoices[0] = "";
 speaker = "0";
 maxLines = 0;
 names[0] = "The Patient"; names[1] = "Dr. Jones"; names[2] = "Henrietta";
 sprites[0] = spr_h_shade; sprites[1] = spr_doc; sprites[2] = spr_h_reveal;
+colors[0] = c_red; colors[1] = c_blue; colors[2] = c_red;
 curString = ""; readFile = "";
 dialogMod = 1;
 draw_set_font(game_font);
 file = file_text_open_read("dialog_text.txt");
+curStrings[0] = "";
 
 typedLetters = 0;
+choiceLetters[0] = 0;
+privilegeBlock[0] = 0;
+privilegeBlock[1] = 0;
+newLines = 0;
 
 //Read and track lines
 var i = 0;
 
 while(!file_text_eof(file)){
      readFile = file_text_readln(file);
-     lines[i,0] = script_execute(split_string, readFile, 0, "|");
-     lines[i,1] = script_execute(split_string, readFile, 2, "|");
-     sceneDesc[i] = script_execute(split_string, readFile, 1, "|");
+     curStrings = script_execute(separate_string, readFile, "|");
+     
+     lines[i,0] = curStrings[0];
+     lines[i,1] = curStrings[2];
+     sceneDesc[i] = curStrings[1];
      i++;
 }
 
 maxLines = i;
 
 file_text_close(file);
+
+curString = lines[curDialog, 1];
+speaker = lines[curDialog, 0];
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="10">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>curString = lines[curDialog, 1];
+speaker = lines[curDialog, 0];
+if(sceneDesc[curDialog] == "C")
+curChoices[] = script_execute(separate_string, curString, "@");
+for(i=1; i&lt;array_length_1d(curChoices[]);i++){
+choiceLetters[i] = choiceLetters[i-1] + string_length(curChoices[i-1]);
+}
 </string>
           </argument>
         </arguments>
@@ -75,7 +116,6 @@ file_text_close(file);
         <arguments>
           <argument>
             <kind>1</kind>
-<<<<<<< HEAD
             <string>draw_sprite(spr_UI, 0, 0,512);
 draw_sprite(sprites[speaker], 0, 16, 527);
 draw_set_color(colors[speaker]);
@@ -94,32 +134,19 @@ if(sceneDesc[curDialog] == "C"){
         draw_text(282, 560 + 24 * (i + newLines), string_copy(curChoices[i], 0, ceil(min(string_length(curChoices[i]), curLetters))));
         newLines += string_count("#", curChoices[i]);
         }
-=======
-            <string>curString = lines[curDialog,1];
-speaker = lines[curDialog, 0];
+    }
 
-draw_sprite(spr_UI, 0, 0,512);
-draw_sprite(sprites[speaker], 0, 16, 520);
-
-if(speaker == "0" || speaker == "2")
-    draw_set_color(c_red);
-else if(speaker == "1")
-    draw_set_color(c_blue);
-draw_text(282, 512, names[speaker])
-if(speaker != "1" &amp;&amp; sceneDesc[curDialog] == "C"){
-    grayText = script_execute(split_string, curString, 0, "3");
-    redText = script_execute(split_string, curString, 1, "3");
+    /*
     draw_set_color(c_gray);
     grayLetters = min(typedLetters, string_length(grayText));
     draw_text(282, 536, string_copy(grayText, 0, ceil(grayLetters)));
     if(typedLetters &gt; grayLetters){
         draw_set_color(c_red);
         draw_text(282, 536 + (string_count("#", grayText) + 2) * 12, "3" + string_copy(redText, 0, typedLetters - grayLetters));
->>>>>>> parent of ea8f4ec... Förbättrad dialog
-    }
+    }*/
 }
 else{
-draw_text(282, 536, string_copy(curString, 0, ceil(typedLetters)));
+draw_text(282, 560, string_copy(curString, 0, ceil(typedLetters)));
 }
 if(typedLetters &lt; string_length(curString)) {typedLetters += 0.75;}
 
@@ -127,6 +154,8 @@ if(sceneDesc[curDialog] == "L" || sceneDesc[curDialog] == "C" &amp;&amp; typedLe
     draw_set_color(c_black);
     draw_text(800, 700, "Press Space");
 }
+
+newLines = 0;
 </string>
           </argument>
         </arguments>
@@ -149,12 +178,18 @@ if(sceneDesc[curDialog] == "L" || sceneDesc[curDialog] == "C" &amp;&amp; typedLe
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(sceneDesc[curDialog] == "C" &amp;&amp; speaker != "1"){
+            <string>if(sceneDesc[curDialog] == "C"){
 if(curDialog &lt; maxLines - 1){
 dialogMod = 1;
 curDialog += dialogMod;
+if(speaker == "1") dialogMod = 3;
+privilegeBlock[0] = 0;
+privilegeBlock[1] = 0;
 }
 typedLetters = 0;
+curString = lines[curDialog, 1];
+speaker = lines[curDialog, 0];
+event_user(0);
 }
 </string>
           </argument>
@@ -184,9 +219,12 @@ dialogMod = 2;
 curDialog += dialogMod;
 }
 typedLetters = 0;
+event_user(0);
 }
 else if(speaker != "1" &amp;&amp; sceneDesc[curDialog] == "C")
-{audio_play_sound(snd_nope, 10, false);}
+{audio_play_sound(snd_nope, 10, false);
+privilegeBlock[1] = 1;
+}
 </string>
           </argument>
         </arguments>
@@ -214,10 +252,13 @@ else if(speaker != "1" &amp;&amp; sceneDesc[curDialog] == "C")
 if(curDialog &lt; maxLines - 1){
 dialogMod = 3;
 curDialog += dialogMod;
+dialogMod = 1;
+event_user(0);
 }
 typedLetters = 0;
 }
 else if (speaker != "1" &amp;&amp; sceneDesc[curDialog] == "C"){
+privilegeBlock[0] = 1;
 audio_play_sound(snd_nope, 10, false);
 }
 </string>
@@ -247,10 +288,12 @@ audio_play_sound(snd_nope, 10, false);
 }
 else if(curDialog &lt; maxLines - 1)
 {
-    if(dialogMod != 1){dialogMod = 4 - dialogMod;}
+if(sceneDesc[curDialog] != "C"){
     curDialog += dialogMod;
     dialogMod = 1;
     typedLetters = 0;
+    event_user(0);
+}
 }
 else{game_end();}
 
