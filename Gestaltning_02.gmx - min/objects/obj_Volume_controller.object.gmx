@@ -25,8 +25,33 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var snd = audio_play_sound(Where_is_my_mind, 8, true);
+            <string>snd = audio_play_sound(Where_is_my_mind, 8, true);
 audio_sound_gain(snd, (global.volume * 0.01), 0);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>curVolume = global.volume * 0.01;
+
+audio_sound_gain(snd, (curVolume), 0);
 </string>
           </argument>
         </arguments>
