@@ -121,7 +121,6 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\split_string.gml</script>
-    <script>scripts\separate_string.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\game_font</font>

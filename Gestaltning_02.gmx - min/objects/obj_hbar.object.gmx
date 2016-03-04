@@ -66,9 +66,7 @@ a.x = leftLimit;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(obj_Slider_Manager.sliders[index] != a.percentage){
-obj_Slider_Manager.sliders[index] = a.percentage;
-}
+            <string>obj_Slider_Manager.sliders[index] = a.percentage;
 </string>
           </argument>
         </arguments>

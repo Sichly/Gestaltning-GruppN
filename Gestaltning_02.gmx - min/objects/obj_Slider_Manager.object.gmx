@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>
 // Skapar en array som ska ha hand om indexvärden som kommer ifrån alla sliders
-sliders[0] = global.volume;
+sliders[0] = 0;
 
 </string>
           </argument>
@@ -53,9 +53,8 @@ sliders[0] = global.volume;
             <kind>1</kind>
             <string>
 // Här hanteras all värdena från alla indexen
-if(sliders[0] != global.volume){
+
 global.volume = sliders[0];
-}
 </string>
           </argument>
         </arguments>
