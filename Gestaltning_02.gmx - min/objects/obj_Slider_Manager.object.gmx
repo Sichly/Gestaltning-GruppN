@@ -28,9 +28,11 @@
             <string>
 // Skapar en array som ska ha hand om indexvärden som kommer ifrån alla sliders
 sliders[0] = global.volume;
+sliders[1] = global.nope_snd;
 
 //Lagrar namn på alla sliders
 sliderNames[0] = "Volume";
+sliderNames[1] = "Sounds";
 
 </string>
           </argument>

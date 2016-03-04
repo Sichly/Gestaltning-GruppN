@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>xx = 0;
 grab = false;
-percentage = 0;
+percentage = 100;
 
 sliderName = "";
 

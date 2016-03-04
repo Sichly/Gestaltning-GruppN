@@ -43,7 +43,7 @@ a.image_yscale = image_yscale;
 a.barLength = sprite_width;
 a.rightLimit = rightLimit;
 a.leftLimit = leftLimit;
-a.x = leftLimit;
+a.x = rightLimit;
 
 </string>
           </argument>

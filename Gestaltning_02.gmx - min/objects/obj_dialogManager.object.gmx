@@ -223,6 +223,7 @@ event_user(0);
 }
 else if(speaker != "1" &amp;&amp; sceneDesc[curDialog] == "C")
 {audio_play_sound(snd_nope, 10, false);
+audio_sound_gain(snd_nope, (global.nope_snd * 0.01), 0);
 privilegeBlock[1] = 1;
 }
 </string>
@@ -260,6 +261,7 @@ typedLetters = 0;
 else if (speaker != "1" &amp;&amp; sceneDesc[curDialog] == "C"){
 privilegeBlock[0] = 1;
 audio_play_sound(snd_nope, 10, false);
+audio_sound_gain(snd_nope, (global.nope_snd * 0.01), 0);
 }
 </string>
           </argument>
