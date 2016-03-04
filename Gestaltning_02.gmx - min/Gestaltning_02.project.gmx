@@ -77,6 +77,7 @@
     <sprite>sprites\Border_spr</sprite>
     <sprite>sprites\Bed</sprite>
     <sprite>sprites\Doctor</sprite>
+    <sprite>sprites\Checkbox_spr</sprite>
     <sprite>sprites\Bed1</sprite>
     <sprite>sprites\hospital_tile</sprite>
     <sprite>sprites\Table_spr</sprite>
@@ -115,6 +116,7 @@
         <background>background\background16</background>
       </backgrounds>
     </backgrounds>
+    <background>background\Option_bg</background>
     <background>background\Rug</background>
     <background>background\background14</background>
   </backgrounds>
