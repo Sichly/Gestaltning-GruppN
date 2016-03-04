@@ -27,11 +27,10 @@
             <kind>1</kind>
             <string>
 // Skapar en array som ska ha hand om indexvärden som kommer ifrån alla sliders
-<<<<<<< HEAD
-sliders[2] = 0;
-=======
 sliders[0] = global.volume;
->>>>>>> origin/master
+
+//Lagrar namn på alla sliders
+sliderNames[0] = "Volume";
 
 </string>
           </argument>
@@ -59,11 +58,7 @@ sliders[0] = global.volume;
 // Här hanteras all värdena från alla indexen
 if(sliders[0] != global.volume){
 global.volume = sliders[0];
-<<<<<<< HEAD
-global.privilege = sliders[1];
-=======
 }
->>>>>>> origin/master
 </string>
           </argument>
         </arguments>
