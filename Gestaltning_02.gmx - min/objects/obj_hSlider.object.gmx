@@ -3,7 +3,7 @@
   <spriteName>spr_hSlider</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-1</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -28,13 +28,14 @@
             <string>
 xx = 0;
 grab = false;
-percentage = 0;
+percentage = 100;
 
 // Kod för att procenten ska hålla samma som global.volume
 if(global.volume != 0)
 {
     percentage = global.volume;
 }
+
 </string>
           </argument>
         </arguments>
@@ -66,6 +67,13 @@ if(!mouse_check_button(mb_left))
 if (grab = false)
 {
     exit;
+    
+    //Om privilege slidern är igång så ska procent värdet sättas till 0 igen
+    if (privilegeBool == true)
+    {
+        x = leftLimit;
+        percentage = 0;
+    }
 }
 else
 {
@@ -159,7 +167,15 @@ xx = x - mouse_x;
 
 draw_set_colour(c_white);
 
-draw_text(x + 150 - xx, y, "Volume: " + string(percentage));
+// Om privilege är igång så ska en annan text visas
+if(privilegeBool == true)
+{
+    draw_text(obj_hbar.x + 300, y, "Privileges: " + string(percentage));
+}
+else
+{
+    draw_text(obj_hbar.x + 300, y, "Volume: " + string(percentage));
+}
 
 /*
 draw_set_halign(fa_center);

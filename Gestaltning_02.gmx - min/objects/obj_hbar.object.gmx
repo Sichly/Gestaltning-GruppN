@@ -35,6 +35,16 @@ leftLimit = x + (sprite_width/2) - (image_xscale * 60);
 
 index = -1;
 
+// If-satser som säger vad slidern kontrollerar
+
+privilegeBool = false;
+/*
+if (index == 1)
+{
+    privilegeBool = true;
+}*/
+
+// Skapar en instans av hslider fsom skickar all variablerna dit
 a = instance_create(x, y + 8, obj_hslider);
 
 a.image_xscale = image_xscale;
@@ -42,8 +52,17 @@ a.image_yscale = image_yscale;
 a.barLength = sprite_width;
 a.rightLimit = rightLimit;
 a.leftLimit = leftLimit;
-a.x = leftLimit;
+a.privilegeBool = privilegeBool;
 
+//Här bestämmer vi om värdet på baren ska vara max eller inte
+if(privilegeBool == true)
+{
+    a.x = leftLimit;
+}
+else
+{
+    a.x = rightLimit;
+}
 </string>
           </argument>
         </arguments>

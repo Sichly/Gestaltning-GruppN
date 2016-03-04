@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>
 // Skapar en array som ska ha hand om indexvärden som kommer ifrån alla sliders
-sliders[0] = 0;
+sliders[2] = 0;
 
 </string>
           </argument>
@@ -55,6 +55,7 @@ sliders[0] = 0;
 // Här hanteras all värdena från alla indexen
 
 global.volume = sliders[0];
+global.privilege = sliders[1];
 </string>
           </argument>
         </arguments>
