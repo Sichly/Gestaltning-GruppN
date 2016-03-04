@@ -116,6 +116,7 @@
       </backgrounds>
     </backgrounds>
     <background>background\Rug</background>
+    <background>background\Option_menu</background>
     <background>background\background14</background>
   </backgrounds>
   <paths name="paths"/>
