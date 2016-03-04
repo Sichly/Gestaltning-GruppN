@@ -79,33 +79,35 @@ file_text_close(file);
 speaker = lines[curDialog, 0];
 
 draw_sprite(spr_UI, 0, 0,512);
-draw_sprite(sprites[speaker], 0, 16, 520);
+draw_sprite(sprites[speaker], 0, 16, 527);
 
 if(speaker == "0" || speaker == "2")
     draw_set_color(c_red);
 else if(speaker == "1")
     draw_set_color(c_blue);
-draw_text(282, 512, names[speaker])
+draw_text(282, 534, names[speaker])
 if(speaker != "1" &amp;&amp; sceneDesc[curDialog] == "C"){
     grayText = script_execute(split_string, curString, 0, "3");
     redText = script_execute(split_string, curString, 1, "3");
     draw_set_color(c_gray);
     grayLetters = min(typedLetters, string_length(grayText));
-    draw_text(282, 536, string_copy(grayText, 0, ceil(grayLetters)));
+    draw_text(282, 566, string_copy(grayText, 0, ceil(grayLetters)));
     if(typedLetters &gt; grayLetters){
         draw_set_color(c_red);
-        draw_text(282, 536 + (string_count("#", grayText) + 2) * 12, "3" + string_copy(redText, 0, typedLetters - grayLetters));
+        draw_text(282, 566 + (string_count("#", grayText) + 2) * 12, "3" + string_copy(redText, 0, typedLetters - grayLetters));
     }
 }
 else{
-draw_text(282, 536, string_copy(curString, 0, ceil(typedLetters)));
+draw_text(282, 566, string_copy(curString, 0, ceil(typedLetters)));
 }
 if(typedLetters &lt; string_length(curString)) {typedLetters += 0.75;}
 
 if(sceneDesc[curDialog] == "L" || sceneDesc[curDialog] == "C" &amp;&amp; typedLetters &lt; string_length(curString)){
     draw_set_color(c_black);
-    draw_text(800, 700, "Press Space");
+    draw_text(750, 700, "Press Space");
 }
+
+// 512 , 536 , 800
 </string>
           </argument>
         </arguments>
