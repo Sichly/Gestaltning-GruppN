@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.volume = 100;
+            <string>global.volume = 50;
 
 global.nope_snd = 100;
 </string>
