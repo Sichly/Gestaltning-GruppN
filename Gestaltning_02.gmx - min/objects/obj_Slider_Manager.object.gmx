@@ -29,10 +29,12 @@
 // Skapar en array som ska ha hand om indexvärden som kommer ifrån alla sliders
 sliders[0] = global.volume;
 sliders[1] = global.nope_snd;
+sliders[2] = global.priviledge;
 
 //Lagrar namn på alla sliders
 sliderNames[0] = "Volume";
 sliderNames[1] = "Sounds";
+sliderNames[2] = "Priviledge";
 
 </string>
           </argument>
@@ -65,6 +67,11 @@ global.volume = sliders[0];
 if(sliders[1] != global.nope_snd)
 {
     global.nope_snd = sliders[1];
+}
+
+if(sliders[2] != global.priviledge)
+{
+    global.priviledge = sliders[2];
 }
 </string>
           </argument>

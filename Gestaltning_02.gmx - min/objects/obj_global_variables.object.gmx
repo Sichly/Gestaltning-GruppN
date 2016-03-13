@@ -28,6 +28,8 @@
             <string>global.volume = 50;
 
 global.nope_snd = 100;
+
+global.priviledge = 0;
 </string>
           </argument>
         </arguments>
