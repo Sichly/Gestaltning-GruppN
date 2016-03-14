@@ -155,7 +155,9 @@
     <objects name="Options Menu">
       <object>objects\obj_Slider_Manager</object>
       <object>objects\obj_hslider</object>
+      <object>objects\obj_priviledge_hslider</object>
       <object>objects\obj_hbar</object>
+      <object>objects\obj_priviledge_hbar</object>
     </objects>
   </objects>
   <rooms name="rooms">
