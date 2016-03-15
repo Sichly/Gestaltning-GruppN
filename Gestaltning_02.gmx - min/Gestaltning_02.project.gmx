@@ -136,6 +136,7 @@
       <object>objects\obj_global_variables</object>
       <object>objects\obj_btn</object>
       <object>objects\obj_fade</object>
+      <object>objects\obj_Henrietta_fade</object>
     </objects>
     <objects name="Office_room">
       <object>objects\object0</object>
