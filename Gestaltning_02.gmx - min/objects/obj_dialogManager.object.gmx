@@ -288,7 +288,7 @@ if(sceneDesc[curDialog] != "C"){
     event_user(0);
 }
 }
-else{game_end();}
+else{room_goto(Epilogue_room);}
 
 </string>
           </argument>

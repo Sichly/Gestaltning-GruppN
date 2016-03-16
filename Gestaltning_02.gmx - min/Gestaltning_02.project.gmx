@@ -91,6 +91,7 @@
       <sprite>sprites\spr_h_reveal</sprite>
     </sprites>
     <sprite>sprites\Plant_spr</sprite>
+    <sprite>sprites\spr_overlay</sprite>
   </sprites>
   <backgrounds name="background">
     <backgrounds name="tiles">
@@ -118,6 +119,8 @@
     <background>background\Rug</background>
     <background>background\Option_menu</background>
     <background>background\background14</background>
+    <background>background\bg_prologue</background>
+    <background>background\bg_epilogue</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -126,6 +129,7 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\game_font</font>
+    <font>fonts\title_font</font>
   </fonts>
   <objects name="objects">
     <objects name="Menu_room">
@@ -160,13 +164,17 @@
       <object>objects\obj_hbar</object>
       <object>objects\obj_priviledge_hbar</object>
     </objects>
+    <objects name="special">
+      <object>objects\obj_prologText</object>
+      <object>objects\obj_epilogText</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\Epilogue_room</room>
+    <room>rooms\Prologue_room</room>
     <room>rooms\Menu_room</room>
     <room>rooms\Options_room</room>
     <room>rooms\Office_room</room>
-    <room>rooms\Prologue_room</room>
-    <room>rooms\Epilogue_room</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

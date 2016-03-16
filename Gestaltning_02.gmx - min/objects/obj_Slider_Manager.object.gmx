@@ -34,7 +34,7 @@ sliders[2] = global.priviledge;
 //Lagrar namn på alla sliders
 sliderNames[0] = "Volume";
 sliderNames[1] = "Sounds";
-sliderNames[2] = "Priviledge";
+sliderNames[2] = "Privilege";
 
 </string>
           </argument>
