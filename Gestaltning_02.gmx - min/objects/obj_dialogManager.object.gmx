@@ -65,6 +65,7 @@ file_text_close(file);
 
 curString = lines[curDialog, 1];
 speaker = lines[curDialog, 0];
+
 </string>
           </argument>
         </arguments>
@@ -147,6 +148,7 @@ if(sceneDesc[curDialog] == "L" || sceneDesc[curDialog] == "C" &amp;&amp; typedLe
 }
 
 newLines = 0;
+
 </string>
           </argument>
         </arguments>
@@ -288,7 +290,11 @@ if(sceneDesc[curDialog] != "C"){
     event_user(0);
 }
 }
-else{room_goto(Epilogue_room);}
+else
+{
+
+room_goto(Epilogue_room);
+}
 
 </string>
           </argument>
