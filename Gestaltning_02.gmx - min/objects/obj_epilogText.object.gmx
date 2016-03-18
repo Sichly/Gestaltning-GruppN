@@ -81,7 +81,8 @@ draw_set_font(game_font);
 draw_text(512, 192 - heightMod, "Sadly, the real Henrietta Lacks passed away in 1957.")
 draw_text(512, 224 - heightMod, "She died from a particular kind of cancer, which remained incorrectly diagnosed#until long after her death.");
 draw_text(512, 288 - heightMod, "In the medical world, she is widely remembered for the discovery that our Dr. Jones makes.#The so-called immortal cells were crucial in the development of the polio vaccine#and was a significant factor in the development of early cancer treatments.");
-
+draw_text(512, 352 - heightMod, "The struggle that Henrietta went through, as a black woman in the fifties, remains to some extent to this day.#Progress has been made, but we still have quite a ways to go.");
+draw_text(512, 396 - heightMod, "This project has been our contribution to the ongoing discussion regarding race, sex, and their treatment in our society.#This is our attempt to raise awareness regarding the difficult life situation#that far too many people still face to this day.");
 if(heightMod &gt; 128){
     draw_text(512, 640, "Press Space to end the game");
 }
