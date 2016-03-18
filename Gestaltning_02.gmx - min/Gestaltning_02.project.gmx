@@ -68,6 +68,8 @@
       <sprite>sprites\spr_btn_quit</sprite>
       <sprite>sprites\spr_btn_Menu</sprite>
       <sprite>sprites\spr_btn_start</sprite>
+      <sprite>sprites\spr_btn_backMenu</sprite>
+      <sprite>sprites\spr_btn_backMenu2</sprite>
     </sprites>
     <sprites name="slider">
       <sprite>sprites\spr_hBar</sprite>
